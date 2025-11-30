@@ -1,41 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Abbas Fahad - Software & Web Developer based in Helsinki, Finland.">
-    <title>Abbas Fahad | Software & Web Developer</title>
+    <title>Abbas Portfolio</title>
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/intro.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+
+    <!-- Intro Animation Container -->
+    <div id="intro-container">
+        <canvas id="intro-canvas"></canvas>
+        <div class="intro-content">
+            <img src="assets/images/profile.jpg" alt="Abbas Fahad" class="intro-profile-img">
+            <h1 class="intro-name">Abbas Fahad</h1>
+        </div>
+    </div>
 
     <!-- Header / Navigation -->
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo">Abbas<span>.</span></a>
-            
+
             <nav class="navbar">
                 <ul class="nav-links">
-                    <li><a href="#hero" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#hero" class="active" data-i18n="home">Home</a></li>
+                    <li><a href="#about" data-i18n="about">About</a></li>
+                    <li><a href="#projects" data-i18n="projects">Projects</a></li>
+                    <li><a href="gallery.html" data-i18n="gallery">Gallery</a></li>
+                    <li><a href="#contact" data-i18n="contact">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="header-controls">
-                <button id="theme-toggle" aria-label="Toggle Dark Mode">
-                    <i class="fas fa-moon"></i>
-                </button>
+                <select id="language-select" class="language-select">
+                    <option value="en">English</option>
+                    <option value="fi">Suomi</option>
+                    <option value="sv">Svenska</option>
+                    <option value="ar">العربية</option>
+                    <option value="es">Español</option>
+                </select>
+                <!-- Theme toggle removed as we are enforcing a specific dark theme -->
                 <button id="menu-toggle" aria-label="Toggle Menu" class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -47,11 +66,11 @@
     <div class="mobile-menu-overlay" id="mobile-menu">
         <button class="close-menu" id="close-menu"><i class="fas fa-times"></i></button>
         <ul class="mobile-nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#hero" data-i18n="home">Home</a></li>
+            <li><a href="#about" data-i18n="about">About</a></li>
+            <li><a href="#projects" data-i18n="projects">Projects</a></li>
+            <li><a href="gallery.html" data-i18n="gallery">Gallery</a></li>
+            <li><a href="#contact" data-i18n="contact">Contact</a></li>
         </ul>
     </div>
 
@@ -60,13 +79,14 @@
         <div class="hero-background" style="background-image: url('assets/images/profile.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <p class="subtitle">Hello, I'm</p>
+            <p class="subtitle" data-i18n="subtitle">Hello, I'm</p>
             <h1 class="title">Abbas Fahad</h1>
-            <h2 class="role">Software & Web Developer</h2>
-            <p class="location"><i class="fas fa-map-marker-alt"></i> Helsinki, Finland</p>
+            <h2 class="role" data-i18n="role">Software & Web Developer</h2>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> <span data-i18n="location">Helsinki,
+                    Finland</span></p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-outline">Contact Me</a>
+                <a href="#projects" class="btn btn-primary" data-i18n="viewWork">View My Work</a>
+                <a href="#contact" class="btn btn-outline" data-i18n="contactMe">Contact Me</a>
             </div>
         </div>
     </section>
@@ -74,15 +94,18 @@
     <!-- About Section -->
     <section id="about" class="section about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title" data-i18n="aboutTitle">About Me</h2>
             <div class="about-grid">
                 <div class="about-image">
                     <img src="assets/images/profile.jpg" alt="Abbas Fahad">
                 </div>
                 <div class="about-text">
-                    <h3>Software & Web Developer based in Helsinki</h3>
-                    <p>I am a passionate developer with expertise in building modern, responsive, and user-friendly websites and applications. With a strong foundation in both frontend and backend technologies, I strive to create digital experiences that are both functional and visually appealing.</p>
-                    
+                    <h3 data-i18n="role">Software & Web Developer based in Helsinki</h3>
+                    <p data-i18n="aboutText">I am a passionate developer with expertise in building modern, responsive,
+                        and user-friendly
+                        websites and applications. With a strong foundation in both frontend and backend technologies, I
+                        strive to create digital experiences that are both functional and visually appealing.</p>
+
                     <div class="skills-list">
                         <span class="skill-tag">React</span>
                         <span class="skill-tag">CSS</span>
@@ -92,7 +115,7 @@
                         <span class="skill-tag">JavaScript</span>
                     </div>
 
-                    <a href="#contact" class="btn btn-primary">Let's Talk</a>
+                    <a href="#contact" class="btn btn-primary" data-i18n="letsTalk">Let's Talk</a>
                 </div>
             </div>
         </div>
@@ -101,41 +124,47 @@
     <!-- Projects Section -->
     <section id="projects" class="section projects">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
+            <h2 class="section-title" data-i18n="myProjects">My Projects</h2>
             <div class="projects-grid">
                 <!-- Project Card 1 -->
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="placeholder-img">Project 1</div>
+                        <img src="assets/images/project1.jpg" alt="Project 1"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
                         <h3>E-Commerce Platform</h3>
                         <p>A full-featured online store built with React and Node.js.</p>
-                        <button class="btn btn-sm btn-outline open-modal" data-project="1">View Details</button>
+                        <button class="btn btn-sm btn-outline open-modal" data-project="1" data-i18n="viewDetails">View
+                            Details</button>
                     </div>
                 </article>
 
                 <!-- Project Card 2 -->
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="placeholder-img">Project 2</div>
+                        <img src="assets/images/project2.jpg" alt="Project 2"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
                         <h3>Portfolio Website</h3>
                         <p>A responsive personal portfolio designed with modern CSS.</p>
-                        <button class="btn btn-sm btn-outline open-modal" data-project="2">View Details</button>
+                        <button class="btn btn-sm btn-outline open-modal" data-project="2" data-i18n="viewDetails">View
+                            Details</button>
                     </div>
                 </article>
 
                 <!-- Project Card 3 -->
                 <article class="project-card">
                     <div class="project-image">
-                        <div class="placeholder-img">Project 3</div>
+                        <img src="assets/images/project3.jpg" alt="Project 3"
+                            style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="project-content">
                         <h3>Task Management App</h3>
                         <p>A productivity tool for managing daily tasks and workflows.</p>
-                        <button class="btn btn-sm btn-outline open-modal" data-project="3">View Details</button>
+                        <button class="btn btn-sm btn-outline open-modal" data-project="3" data-i18n="viewDetails">View
+                            Details</button>
                     </div>
                 </article>
             </div>
@@ -145,39 +174,39 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title" data-i18n="getInTouch">Get In Touch</h2>
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <h4>Email</h4>
+                            <h4 data-i18n="email">Email</h4>
                             <a href="mailto:abbasfahad313@gmail.com">abbasfahad313@gmail.com</a>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Location</h4>
-                            <p>Helsinki, Finland</p>
+                            <h4 data-i18n="location">Location</h4>
+                            <p data-i18n="location">Helsinki, Finland</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <form class="contact-form" action="mailto:abbasfahad313@gmail.com" method="POST" enctype="text/plain">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name" data-i18n="name">Name</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email" data-i18n="email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="message" data-i18n="message">Message</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" data-i18n="sendMessage">Send Message</button>
                 </form>
             </div>
         </div>
@@ -186,7 +215,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Abbas Fahad. All rights reserved.</p>
+            <p data-i18n="footerRights">&copy; 2024 Abbas Fahad. All rights reserved.</p>
             <div class="social-links">
                 <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -211,9 +240,12 @@
     </div>
 
     <!-- Scripts -->
+    <script src="js/intro.js"></script>
+    <script src="js/translations.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -10,19 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'E-Commerce Platform',
             description: 'A comprehensive e-commerce solution featuring user authentication, product catalog, shopping cart, and payment gateway integration.',
             tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-            image: 'https://via.placeholder.com/600x300?text=E-Commerce+Project'
+            image: 'assets/images/project1.jpg'
         },
         '2': {
             title: 'Portfolio Website',
             description: 'A personal portfolio website designed to showcase skills and projects. Built with semantic HTML, modern CSS, and vanilla JavaScript.',
             tech: ['HTML5', 'CSS3', 'JavaScript'],
-            image: 'https://via.placeholder.com/600x300?text=Portfolio+Project'
+            image: 'assets/images/project2.jpg'
         },
         '3': {
             title: 'Task Management App',
             description: 'A productivity application that allows users to organize tasks, set deadlines, and track progress. Features drag-and-drop interface.',
             tech: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-            image: 'https://via.placeholder.com/600x300?text=Task+App+Project'
+            image: 'assets/images/project3.jpg'
         }
     };
 
