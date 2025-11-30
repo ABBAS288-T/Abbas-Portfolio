@@ -26,10 +26,13 @@
     <div id="intro-container">
         <canvas id="intro-canvas"></canvas>
         <div class="intro-content">
-            <img src="assets/images/profile.jpg" alt="Abbas Fahad" class="intro-profile-img">
+            <img src="assets/images/hero-profile.jpg" alt="Abbas Fahad" class="intro-profile-img">
             <h1 class="intro-name">Abbas Fahad</h1>
         </div>
     </div>
+
+    <!-- Background Animation Canvas -->
+    <canvas id="bg-canvas"></canvas>
 
     <!-- Header / Navigation -->
     <header class="header">
@@ -76,7 +79,7 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="hero-background" style="background-image: url('assets/images/profile.jpg');"></div>
+        <div class="hero-background" style="background-image: url('assets/images/hero-profile.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <p class="subtitle" data-i18n="subtitle">Hello, I'm</p>
@@ -97,7 +100,7 @@
             <h2 class="section-title" data-i18n="aboutTitle">About Me</h2>
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="assets/images/profile.jpg" alt="Abbas Fahad">
+                    <img src="assets/images/hero-profile.jpg" alt="Abbas Fahad">
                 </div>
                 <div class="about-text">
                     <h3 data-i18n="role">Software & Web Developer based in Helsinki</h3>
@@ -241,6 +244,7 @@
 
     <!-- Scripts -->
     <script src="js/intro.js"></script>
+    <script src="js/background.js"></script>
     <script src="js/translations.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/menu.js"></script>

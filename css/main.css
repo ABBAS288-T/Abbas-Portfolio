@@ -340,6 +340,17 @@ img {
     box-shadow: var(--glow);
 }
 
+/* Background Canvas */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
 /* Projects Section */
 .projects-grid {
     display: grid;
@@ -362,7 +373,8 @@ img {
 }
 
 .project-image {
-    height: 200px;
+    height: 250px;
+    /* Increased height for better visibility */
     overflow: hidden;
     position: relative;
 }
@@ -371,6 +383,8 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
+    /* Focus on the top part of the image (faces/headers) */
     transition: transform 0.5s ease;
 }
 
