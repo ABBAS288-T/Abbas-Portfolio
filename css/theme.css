@@ -1,35 +1,88 @@
 :root {
-    /* Light Theme Variables */
-    --primary-color: #6366f1; /* Indigo 500 */
-    --primary-hover: #4f46e5; /* Indigo 600 */
-    --secondary-color: #ec4899; /* Pink 500 */
-    --text-main: #1f2937; /* Gray 800 */
-    --text-muted: #6b7280; /* Gray 500 */
-    --bg-body: #f9fafb; /* Gray 50 */
-    --bg-card: #ffffff;
-    --bg-nav: rgba(255, 255, 255, 0.9);
-    --border-color: #e5e7eb; /* Gray 200 */
+    /* Light Theme Variables (White Mode) */
+    --primary-color: #4f46e5;
+    /* Indigo 600 - Darker for better contrast */
+    --primary-hover: #4338ca;
+    /* Indigo 700 */
+    --secondary-color: #db2777;
+    /* Pink 600 */
+    --accent-color: #7c3aed;
+    /* Violet 600 - Strong accent */
+
+    --text-main: #000000;
+    /* Pure Black */
+    --text-muted: #1f2937;
+    /* Gray 800 - Very dark gray, almost black */
+    --text-color: #000000;
+    /* Alias for compatibility */
+
+    --bg-body: #ffffff;
+    /* White */
+    --bg-color: #ffffff;
+    /* Alias */
+
+    --bg-card: #f3f4f6;
+    /* Gray 100 */
+    --card-bg: #f3f4f6;
+    /* Alias */
+
+    --bg-nav: rgba(255, 255, 255, 0.95);
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    /* Alias */
+
+    --border-color: #e5e7eb;
+    /* Gray 200 */
+
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --glow: 0 0 15px rgba(79, 70, 229, 0.3);
+    /* Subtle glow for light mode */
+
     /* Fonts */
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
 
 [data-theme="dark"] {
-    /* Dark Theme Variables */
-    --primary-color: #818cf8; /* Indigo 400 */
-    --primary-hover: #6366f1; /* Indigo 500 */
-    --secondary-color: #f472b6; /* Pink 400 */
-    --text-main: #f9fafb; /* Gray 50 */
-    --text-muted: #9ca3af; /* Gray 400 */
-    --bg-body: #111827; /* Gray 900 */
-    --bg-card: #1f2937; /* Gray 800 */
-    --bg-nav: rgba(17, 24, 39, 0.9);
-    --border-color: #374151; /* Gray 700 */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    /* Dark Theme Variables (Black Mode) */
+    --primary-color: #818cf8;
+    /* Indigo 400 */
+    --primary-hover: #6366f1;
+    /* Indigo 500 */
+    --secondary-color: #f472b6;
+    /* Pink 400 */
+    --accent-color: #a78bfa;
+    /* Violet 400 */
+
+    --text-main: #ffffff;
+    /* White */
+    --text-muted: #d1d5db;
+    /* Gray 300 */
+    --text-color: #e0e0e0;
+    /* Alias */
+
+    --bg-body: #000000;
+    /* Black */
+    --bg-color: #050505;
+    /* Alias */
+
+    --bg-card: #111827;
+    /* Gray 900 */
+    --card-bg: #121212;
+    /* Alias */
+
+    --bg-nav: rgba(0, 0, 0, 0.9);
+    --nav-bg: rgba(10, 10, 10, 0.95);
+    /* Alias */
+
+    --border-color: #374151;
+    /* Gray 700 */
+
+    --shadow-sm: 0 1px 2px 0 rgba(255, 255, 255, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(255, 255, 255, 0.05), 0 2px 4px -1px rgba(255, 255, 255, 0.03);
+    --shadow-lg: 0 10px 15px -3px rgba(255, 255, 255, 0.05), 0 4px 6px -2px rgba(255, 255, 255, 0.03);
+    --shadow: 0 4px 20px rgba(138, 43, 226, 0.2);
+    --glow: 0 0 15px rgba(138, 43, 226, 0.6);
 }

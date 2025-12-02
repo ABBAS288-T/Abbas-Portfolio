@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function closeMenuFunc() {
         mobileMenu.classList.remove('active');
         document.body.style.overflow = ''; // Restore scrolling
+        document.body.style.removeProperty('overflow'); // Double ensure
     }
 
     menuToggle.addEventListener('click', openMenu);

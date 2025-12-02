@@ -23,7 +23,7 @@ const translations = {
         email: "Email",
         message: "Message",
         sendMessage: "Send Message",
-        footerRights: "© 2024 Abbas Fahad. All rights reserved."
+        footerRights: "© 2926 Abbas Fahad. All rights reserved."
     },
     fi: {
         home: "Etusivu",
@@ -46,7 +46,7 @@ const translations = {
         email: "Sähköposti",
         message: "Viesti",
         sendMessage: "Lähetä viesti",
-        footerRights: "© 2024 Abbas Fahad. Kaikki oikeudet pidätetään."
+        footerRights: "© 2926 Abbas Fahad. Kaikki oikeudet pidätetään."
     },
     sv: {
         home: "Hem",
@@ -69,7 +69,7 @@ const translations = {
         email: "E-post",
         message: "Meddelande",
         sendMessage: "Skicka meddelande",
-        footerRights: "© 2024 Abbas Fahad. Alla rättigheter förbehållna."
+        footerRights: "© 2926 Abbas Fahad. Alla rättigheter förbehållna."
     },
     ar: {
         home: "الرئيسية",
@@ -92,7 +92,7 @@ const translations = {
         email: "البريد الإلكتروني",
         message: "الرسالة",
         sendMessage: "إرسال الرسالة",
-        footerRights: "© 2024 عباس فهد. جميع الحقوق محفوظة."
+        footerRights: "© 2926 عباس فهد. جميع الحقوق محفوظة."
     },
     es: {
         home: "Inicio",
@@ -115,7 +115,7 @@ const translations = {
         email: "Correo electrónico",
         message: "Mensaje",
         sendMessage: "Enviar mensaje",
-        footerRights: "© 2024 Abbas Fahad. Todos los derechos reservados."
+        footerRights: "© 2926 Abbas Fahad. Todos los derechos reservados."
     }
 };
 

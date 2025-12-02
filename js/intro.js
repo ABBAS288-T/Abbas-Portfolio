@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             dot.radius += Math.sin(Date.now() / 100) * 0.2;
 
-            // Transition to explode after 1.5 seconds
-            if (Date.now() - startTime > 1500) {
+            // Transition to explode after 0.5 seconds
+            if (Date.now() - startTime > 500) {
                 stage = 'explode';
                 createExplosion();
             }
@@ -111,11 +111,18 @@ document.addEventListener('DOMContentLoaded', () => {
             container.style.visibility = 'hidden';
             stage = 'done';
             cancelAnimationFrame(animationFrameId);
-        }, 3000);
+        }, 1000); // Reduced from 3000ms to 1000ms
     }
 
     let startTime = Date.now();
-    animate();
+
+    // Check if intro has already run in this session
+    if (!sessionStorage.getItem('introShown')) {
+        sessionStorage.setItem('introShown', 'true');
+        animate();
+    } else {
+        container.style.display = 'none';
+    }
 
     // Handle resize
     window.addEventListener('resize', () => {
