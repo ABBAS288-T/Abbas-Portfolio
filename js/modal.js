@@ -64,44 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add Project Button Logic
-    const addProjectBtn = document.getElementById('add-project-btn');
-    if (addProjectBtn) {
-        addProjectBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const content = `
-                <h2 style="margin-bottom: 20px; color: var(--text-main);">Add New Project</h2>
-                <form id="add-project-form" style="display: flex; flex-direction: column; gap: 15px;">
-                    <div>
-                        <label style="display: block; margin-bottom: 5px; color: var(--text-muted);">Project Title</label>
-                        <input type="text" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
-                    </div>
-                    <div>
-                        <label style="display: block; margin-bottom: 5px; color: var(--text-muted);">Description</label>
-                        <textarea required rows="4" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);"></textarea>
-                    </div>
-                    <div>
-                        <label style="display: block; margin-bottom: 5px; color: var(--text-muted);">Image URL</label>
-                        <input type="url" placeholder="https://..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--bg-body); color: var(--text-main);">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Save Project</button>
-                </form>
-            `;
-            openModal(content);
 
-            // Handle form submission (mock)
-            setTimeout(() => {
-                const form = document.getElementById('add-project-form');
-                if (form) {
-                    form.addEventListener('submit', (ev) => {
-                        ev.preventDefault();
-                        alert('Project added successfully! (This is a demo)');
-                        closeModalFunc();
-                    });
-                }
-            }, 100);
-        });
-    }
 
     // Close button click
     closeModal.addEventListener('click', closeModalFunc);
